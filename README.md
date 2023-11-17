@@ -1,2 +1,2 @@
 # slozhno-sosredotochitsya
-Проект "Сложно сосредоточиться"
+git@github.com:Tarnum1207/slozhno-sosredotochitsya.git
