@@ -4,9 +4,102 @@
   переключая тему
 */
 
-.page.theme_light {
-  /* сохраните этот селектор в приведённом виде.
-    Так стили написанные ниже будут иметь больший вес,
-    чем стили в медиазапросе предпочтений пользователя
-  */
+:root {
+
+    --bg-color-light: #FFF1F7;
+    --text-color-light: #353430;
+    --title-color-light: #353430;
+    --h2_title-color-light: #353430;
+    --bg_title-color-light: #FF8DCB;
+    --focus-color-light: #FFC2E6;
 }
+
+
+.page.theme_light {
+    /* сохраните этот селектор в приведённом виде.
+      Так стили написанные ниже будут иметь больший вес,
+      чем стили в медиазапросе предпочтений пользователя
+    */
+}
+
+.theme_light a:hover {
+    border-bottom: 1px solid #353430;
+}
+
+.theme_light .header-decoration {
+    display: none;
+}
+
+.theme_light .header__theme-menu-button_type_light::after{
+    content: "";
+    position: absolute;
+    border: 1px solid #353430;
+    width: 70px;
+    height: 26px;
+    left: -7px;
+    top: 2px;
+}
+
+.theme_light {
+    background-color: var(--bg-color-light);
+}
+
+.theme_light .main__description_block-text {
+    color: var(--text-color-light);
+}
+
+.theme_light .main__description_title {
+    color: var(--h2_title-color-light);
+}
+
+.theme_light .main__description_block-title {
+    color: var(--title-color-light);
+    background-color: var(--bg_title-color-light);
+}
+
+.theme_light .header_description-item {
+    background-color: var(--bg_title-color-light);
+    color: var(--title-color-light);
+}
+
+.theme_light .header__theme-menu-button {
+    color: var(--h2_title-color-light);
+}
+
+.theme_light .header_title {
+    color: var(--focus-color-light);
+    text-shadow: 4px 4px 0px #FF0070;
+}
+
+.theme_light .footer_title {
+    color: var(--focus-color-light);
+    text-shadow: 4px 4px 0px #FF0070;
+}
+
+.theme_light .header::before {
+    position: absolute;
+    z-index: -1;
+    content: "";
+    width: calc(100vw - 11px);
+    height: 100%;
+    left: -11px;
+    bottom: 21px;
+    background-image: url("../images/cover-image-light.png");
+    background-size: cover;
+    background-position: center;
+}
+
+@media (width <= 375px) {
+
+    .theme_light .header::before {
+        left: -4px;
+        bottom: 90px;
+        width: calc(100vw - 4px);
+    }
+
+    .theme_dark .header-decoration {
+        right: 51px;
+    }
+}
+
+

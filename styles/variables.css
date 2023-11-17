@@ -1,4 +1,15 @@
-/*
-  Переменные для вашего проекта
-  и их переопределение под различные устройства
-*/
+:root {
+    --bg-color-dark: #000028;
+    --text-color-dark: #F1B2CE;
+    --title-color-dark: #000028;
+    --h2_title-color-dark: #FF0070;
+    --bg_title-color-dark: #FF0070;
+    --focus-color-dark: #DB00FF;
+
+    --bg-color-light: #FFF1F7;
+    --text-color-light: #353430;
+    --title-color-light: #353430;
+    --h2_title-color-light: #353430;
+    --bg_title-color-light: #FF8DCB;
+    --focus-color-light: #FFC2E6;
+}

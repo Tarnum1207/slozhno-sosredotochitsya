@@ -3,10 +3,162 @@
   здесь окажутся стили, которые нужно переопределить принудительно,
   переключая тему
 */
+:root {
+    --bg-color-dark: #000028;
+    --text-color-dark: #F1B2CE;
+    --title-color-dark: #000028;
+    --h2_title-color-dark: #FF0070;
+    --bg_title-color-dark: #FF0070;
+    --focus-color-dark: #DB00FF;
+}
 
 .page.theme_dark {
-  /* сохраните этот селектор в приведённом виде.
-    Так стили написанные ниже будут иметь больший вес,
-    чем стили в медиазапросе предпочтений пользователя
-  */
+    /* сохраните этот селектор в приведённом виде.
+      Так стили написанные ниже будут иметь больший вес,
+      чем стили в медиазапросе предпочтений пользователя
+    */
 }
+
+.theme_dark .header-decoration {
+    display: block;
+    position: absolute;
+    color: var(--h2_title-color-dark);
+    text-align: center;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 25px;
+    right: 28px;
+    top: 2px;
+}
+
+.theme_dark .header__theme-menu-list{
+    position: relative;
+}
+
+.theme_dark .header__theme-menu-button_type_dark::after{
+    content: "";
+    position: absolute;
+    border: 1px solid #FF0070;
+    width: 70px;
+    height: 26px;
+    left: -7px;
+    top: 2px;
+}
+
+.theme_dark .header-decoration::before {
+    content: "";
+    display: block;
+    position: absolute;
+    z-index: 2;
+    width: 25px;
+    height: 25px;
+    background-image: url("../images/Ellipse.png");
+    background-position: center;
+    left: 35px;
+}
+
+.theme_dark {
+    background-color: var(--bg-color-dark);
+}
+
+.theme_dark .header_title:after {
+    border-color: var(--h2_title-color-dark);
+}
+
+.theme_dark .header_title:before {
+    border-color: var(--h2_title-color-dark);
+}
+
+.theme_dark .footer_title:after {
+    border-color: var(--h2_title-color-dark);
+}
+
+.theme_dark .footer_title:before {
+    border-color: var(--h2_title-color-dark);
+}
+
+.theme_dark .main__description_title {
+    color: var(--h2_title-color-dark);
+}
+
+.theme_dark .main__description_block-text {
+    color: var(--text-color-dark);
+}
+
+
+.theme_dark .header__theme-menu-button {
+    color: var(--h2_title-color-dark);
+}
+
+.theme_dark .header_title {
+    color: var(--focus-color-dark);
+    text-shadow: 4px 4px 0px #FF0070;
+}
+
+.theme_dark .footer_title {
+    color: var(--focus-color-dark);
+    text-shadow: 4px 4px 0px #FF0070;
+}
+
+.theme_dark .header_description-item {
+    background-color: var(--bg_title-color-dark);
+    color: var(--title-color-dark);
+}
+
+.theme_dark .main__description_block-title {
+    color: var(--title-color-dark);
+    background-color: var(--bg_title-color-dark);
+}
+
+.theme_dark .header::before {
+    position: absolute;
+    z-index: -1;
+    content: "";
+    width: calc(100vw - 11px);
+    height: 100%;
+    left: -11px;
+    bottom: 21px;
+    background-image: url("../images/cover-image-dark.png");
+    background-size: cover;
+    background-position: center;
+}
+
+.theme_dark .header__theme-menu-button:hover::after {
+
+    border: 1px solid rgba(255, 0, 112, 0.40);
+
+}
+
+.theme_dark .header__theme-menu-button:focus {
+    border-bottom: 1px solid var(--bg_title-color-dark);
+}
+
+.theme_dark a:hover {
+    border-color: var(--text-color-dark);
+}
+
+.theme_dark a {
+    text-shadow: 3px 2px 0px var(--bg_title-color-dark);
+}
+
+.theme_dark a:focus {
+    border: 1px solid var(--text-color-dark);
+    outline: none;
+}
+
+@media (width <= 375px) {
+
+    .theme_dark .header::before {
+        left: -10px;
+        bottom: 90px;
+        width: 100vw;
+    }
+}
+
+
+
+
+
+
+
+
