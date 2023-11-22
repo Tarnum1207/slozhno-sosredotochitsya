@@ -3,13 +3,13 @@
   здесь окажутся стили, которые нужно переопределить принудительно,
   переключая тему
 */
-:root {
-    --bg-color-dark: #000028;
-    --text-color-dark: #F1B2CE;
-    --title-color-dark: #000028;
-    --h2_title-color-dark: #FF0070;
-    --bg_title-color-dark: #FF0070;
-    --focus-color-dark: #DB00FF;
+:root .theme_dark {
+    --bg-color: #000028;
+    --text-color: #F1B2CE;
+    --title-color: #000028;
+    --heading_title-color: #FF0070;
+    --bg_title-color: #FF0070;
+    --focus-color: #DB00FF;
 }
 
 .page.theme_dark {
@@ -19,16 +19,12 @@
     */
 }
 
-.theme_dark .header-decoration {
-    display: block;
-    position: absolute;
-    color: var(--h2_title-color-dark);
-    text-align: center;
-    font-size: 18px;
-    font-weight: 400;
-    line-height: 25px;
-    right: 28px;
-    top: 2px;
+.theme_dark .decorated-zone:before {
+    border-color: var(--heading_title-color);
+}
+
+.theme_dark .decorated-zone:after {
+    border-color: var(--heading_title-color);
 }
 
 .theme_dark .header__theme-menu-list{
@@ -45,6 +41,18 @@
     top: 2px;
 }
 
+/*REC*/
+.theme_dark .header-decoration {
+    color: var(--heading_title-color);
+    display: flex;
+    position: absolute;
+    align-items: center;
+    font-size: 18px;
+    font-weight: 400;
+    top: 2px;
+    right: 29px;
+}
+
 .theme_dark .header-decoration::before {
     content: "";
     display: block;
@@ -56,71 +64,60 @@
     background-position: center;
     left: 35px;
 }
+/*/REC*/
 
 .theme_dark {
-    background-color: var(--bg-color-dark);
+    background-image: url("../images/cover-image-dark.png");
+    background-color: var(--bg-color);
 }
 
 .theme_dark .header_title:after {
-    border-color: var(--h2_title-color-dark);
+    border-color: var(--heading_title-color);
 }
 
 .theme_dark .header_title:before {
-    border-color: var(--h2_title-color-dark);
+    border-color: var(--heading_title-color);
 }
 
 .theme_dark .footer_title:after {
-    border-color: var(--h2_title-color-dark);
+    border-color: var(--heading_title-color);
 }
 
 .theme_dark .footer_title:before {
-    border-color: var(--h2_title-color-dark);
+    border-color: var(--heading_title-color);
 }
 
 .theme_dark .main__description_title {
-    color: var(--h2_title-color-dark);
+    color: var(--heading_title-color);
 }
 
 .theme_dark .main__description_block-text {
-    color: var(--text-color-dark);
+    color: var(--text-color);
 }
 
 
 .theme_dark .header__theme-menu-button {
-    color: var(--h2_title-color-dark);
+    color: var(--heading_title-color);
 }
 
 .theme_dark .header_title {
-    color: var(--focus-color-dark);
+    color: var(--focus-color);
     text-shadow: 4px 4px 0px #FF0070;
 }
 
 .theme_dark .footer_title {
-    color: var(--focus-color-dark);
+    color: var(--focus-color);
     text-shadow: 4px 4px 0px #FF0070;
 }
 
 .theme_dark .header_description-item {
-    background-color: var(--bg_title-color-dark);
-    color: var(--title-color-dark);
+    background-color: var(--bg_title-color);
+    color: var(--title-color);
 }
 
 .theme_dark .main__description_block-title {
-    color: var(--title-color-dark);
-    background-color: var(--bg_title-color-dark);
-}
-
-.theme_dark .header::before {
-    position: absolute;
-    z-index: -1;
-    content: "";
-    width: calc(100vw - 11px);
-    height: 100%;
-    left: -11px;
-    bottom: 21px;
-    background-image: url("../images/cover-image-dark.png");
-    background-size: cover;
-    background-position: center;
+    color: var(--title-color);
+    background-color: var(--bg_title-color);
 }
 
 .theme_dark .header__theme-menu-button:hover::after {
@@ -130,29 +127,20 @@
 }
 
 .theme_dark .header__theme-menu-button:focus {
-    border-bottom: 1px solid var(--bg_title-color-dark);
+    border-bottom: 1px solid var(--bg_title-color);
 }
 
 .theme_dark a:hover {
-    border-color: var(--text-color-dark);
+    border-color: var(--text-color);
 }
 
 .theme_dark a {
-    text-shadow: 3px 2px 0px var(--bg_title-color-dark);
+    text-shadow: 3px 2px 0px var(--bg_title-color);
 }
 
 .theme_dark a:focus {
-    border: 1px solid var(--text-color-dark);
+    border: 1px solid var(--text-color);
     outline: none;
-}
-
-@media (width <= 375px) {
-
-    .theme_dark .header::before {
-        left: -10px;
-        bottom: 90px;
-        width: 100vw;
-    }
 }
 
 
