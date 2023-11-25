@@ -1,9 +1,12 @@
+
 :root {
 
-    --bg-color: #FFF1F7;
-    --text-color: #353430;
-    --title-color: #353430;
-    --heading_title-color: #353430;
-    --bg_title-color: #FF8DCB;
-    --focus-color: #FFC2E6;
+    --bg-color: #000028;
+    --text-color: #F1B2CE;
+    --title-color: #000028;
+    --heading_title-color: #FF0070;
+    --bg_title-color: #FF0070;
+    --focus-color: #DB00FF;
 }
+
+
