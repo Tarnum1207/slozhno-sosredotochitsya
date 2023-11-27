@@ -3,20 +3,52 @@
   здесь окажутся стили, которые нужно переопределить принудительно,
   переключая тему
 */
+
 :root .theme_dark {
+
     --bg-color: #000028;
     --text-color: #F1B2CE;
     --title-color: #000028;
     --heading_title-color: #FF0070;
     --bg_title-color: #FF0070;
     --focus-color: #DB00FF;
+    --hover-color: rgba(255, 0, 112, 0.40);
 }
 
 .page.theme_dark {
-    /* сохраните этот селектор в приведённом виде.
-      Так стили написанные ниже будут иметь больший вес,
-      чем стили в медиазапросе предпочтений пользователя
-    */
+    background-color: var(--bg-color);
+    --background-image: url(../images/cover-image-dark.png);
+}
+
+.theme_dark .header_title {
+    color: var(--focus-color);
+    text-shadow: 4px 4px 0 var(--heading_title-color);
+}
+
+.theme_dark .footer_title {
+    color: var(--focus-color);
+    text-shadow: 4px 4px 0 var(--heading_title-color);
+}
+
+.theme_dark .header__theme-menu-button:hover::after {
+
+    border-color: var(--hover-color);
+
+}
+
+.theme_dark.header__theme-menu-button_active {
+
+    border: 1px solid var(--heading_title-color);
+}
+
+.theme_dark a:focus {
+    border-color: var(--text-color);
+    outline: none;
+}
+
+.theme_dark .header__theme-menu-button:focus {
+
+    border-color: var(--bg_title-color);
 }
 
 .theme_dark .decorated-zone:before {
@@ -25,14 +57,6 @@
 
 .theme_dark .decorated-zone:after {
     border-color: var(--heading_title-color);
-}
-
-.theme_dark .header__theme-menu-list{
-    position: relative;
-}
-
-.theme_dark {
-    background-color: var(--bg-color);
 }
 
 .theme_dark .header_title:after {
@@ -64,16 +88,6 @@
     color: var(--heading_title-color);
 }
 
-.theme_dark .header_title {
-    color: var(--focus-color);
-    text-shadow: 4px 4px 0px #FF0070;
-}
-
-.theme_dark .footer_title {
-    color: var(--focus-color);
-    text-shadow: 4px 4px 0px #FF0070;
-}
-
 .theme_dark .header_description-item {
     background-color: var(--bg_title-color);
     color: var(--title-color);
@@ -84,132 +98,16 @@
     background-color: var(--bg_title-color);
 }
 
-.theme_dark .header__theme-menu-button:hover::after {
-
-    border: 1px solid rgba(255, 0, 112, 0.40);
-
-}
-
-.theme_dark .header__theme-menu-button:focus {
-    border-bottom: 1px solid var(--bg_title-color);
-}
-
 .theme_dark a:hover {
     border-color: var(--text-color);
 }
 
 .theme_dark a {
-    text-shadow: 3px 2px 0px var(--bg_title-color);
+    text-shadow: var(--bg_title-color);
 }
 
-.theme_dark a:focus {
-    border: 1px solid var(--text-color);
-    outline: none;
-}
+.theme_dark .header__theme-menu-button_type_dark::after {
 
-@media (prefers-color-scheme: dark) {
-
-    .page.theme_auto {
-        /* сохраните этот селектор в приведённом виде.
-          Так стили написанные ниже будут иметь больший вес,
-          чем стили в медиазапросе предпочтений пользователя
-        */
-    }
-
-    .theme_auto .decorated-zone:before {
-        border-color: var(--heading_title-color);
-    }
-
-    .theme_auto .decorated-zone:after {
-        border-color: var(--heading_title-color);
-    }
-
-    .theme_auto .header__theme-menu-list{
-        position: relative;
-    }
-
-    .theme_auto {
-        background-color: var(--bg-color);
-    }
-
-    .theme_auto .header_title:after {
-        border-color: var(--heading_title-color);
-    }
-
-    .theme_auto .header_title:before {
-        border-color: var(--heading_title-color);
-    }
-
-    .theme_auto .footer_title:after {
-        border-color: var(--heading_title-color);
-    }
-
-    .theme_auto .footer_title:before {
-        border-color: var(--heading_title-color);
-    }
-
-    .theme_auto .main__description_title {
-        color: var(--heading_title-color);
-    }
-
-    .theme_auto .main__description_block-text {
-        color: var(--text-color);
-    }
-
-
-    .theme_auto .header__theme-menu-button {
-        color: var(--heading_title-color);
-    }
-
-    .theme_auto .header_title {
-        color: var(--focus-color);
-        text-shadow: 4px 4px 0px #FF0070;
-    }
-
-    .theme_auto .footer_title {
-        color: var(--focus-color);
-        text-shadow: 4px 4px 0px #FF0070;
-    }
-
-    .theme_auto .header_description-item {
-        background-color: var(--bg_title-color);
-        color: var(--title-color);
-    }
-
-    .theme_auto .main__description_block-title {
-        color: var(--title-color);
-        background-color: var(--bg_title-color);
-    }
-
-    .theme_auto .header__theme-menu-button:hover::after {
-
-        border: 1px solid rgba(255, 0, 112, 0.40);
-
-    }
-
-    .theme_auto .header__theme-menu-button:focus {
-        border-bottom: 1px solid var(--bg_title-color);
-    }
-
-    .theme_auto a:hover {
-        border-color: var(--text-color);
-    }
-
-    .theme_auto a {
-        text-shadow: 3px 2px 0px var(--bg_title-color);
-    }
-
-    .theme_auto a:focus {
-        border: 1px solid var(--text-color);
-        outline: none;
-    }
+    border-color: var(--heading_title-color);
 
 }
-
-
-
-
-
-
-
-

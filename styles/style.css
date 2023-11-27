@@ -1,7 +1,8 @@
 /* Основные стили проекта. Это стили для темы, которую вы верстаете первой. */
 /* Стилизация кнопок хэдера */
-.header__theme-menu-list{
+.header__theme-menu-list {
     display: grid;
+    position: relative;
     grid-template-columns: min-content min-content min-content;
     justify-content: center;
     gap: 25px;
@@ -9,18 +10,20 @@
     font-weight: 400;
     margin-block-start: 20px;
 }
-.header__theme-menu{
+
+.header__theme-menu {
     align-self: start;
 }
 
-.header__theme-menu-button{
-     cursor: pointer;
-     border: none;
-     background-color: transparent;
-     position: relative;
+.header__theme-menu-button {
+    cursor: pointer;
+    border: none;
+    background-color: transparent;
+    position: relative;
+
 }
 
-.header__theme-menu-button:hover::after{
+.header__theme-menu-button:hover::after {
     content: "";
     position: absolute;
     border: 1px solid rgba(50, 49, 45, 0.40);
@@ -30,27 +33,19 @@
     top: 2px;
 }
 
-.header__theme-menu-button:focus{
-    border-bottom: 1px solid #353430;
+.header__theme-menu-button:focus {
+
     outline: none;
 }
 
-
-
-.theme_light .header__theme-menu-button_type_light::after{
-    content: "";
-    position: absolute;
-    border: 1px solid #353430;
-    width: 70px;
-    height: 26px;
-    left: -7px;
-    top: 2px;
+.header__theme-menu-button:focus-visible {
+    border-bottom: 1px solid #353430;
 }
 
-.theme_auto .header__theme-menu-button_type_auto::after{
+.header__theme-menu-button_active::after {
     content: "";
     position: absolute;
-    border: 1px solid #353430;
+    border: 1px solid;
     width: 70px;
     height: 26px;
     left: -7px;
@@ -60,6 +55,7 @@
 .header__theme-menu-button_active{
     pointer-events: none;
 }
+
 
 /* /Стилизация кнопок хэдера */
 
@@ -72,41 +68,39 @@
     min-height: 668px;
 }
 
-.header-decoration {
-    display: none;
-}
 
 body {
     background-color: #FFF1F7;
-    background-image: url("../images/cover-image-light.png");
+    background: var(--background-image);
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
     background-attachment: fixed;
 }
 
-main{
+main {
     display: flex;
     flex-direction: column;
     gap: 80px;
 }
 
 /* no focus */
-.header_title{
+.header_title {
     font-weight: 700;
     font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
     color: #FFC2E6;
     margin-inline-start: -20px;
-    text-shadow: 4px 4px 0px #FF0070;
+    text-shadow: 4px 4px 0 #FF0070;
 }
 
 .header_description-item {
     background-color: #FF8DCB;
     margin-block-end: 60px;
 }
+
 /* /no focus */
 
-.header_description{
+.header_description {
     font-weight: 700;
     font-size: 18px;
     width: 50%;
@@ -115,7 +109,7 @@ main{
 
 /* блок с описанием в хэдере */
 
-.header_description-item{
+.header_description-item {
     color: rgba(53, 52, 48, 1);
 }
 
@@ -140,25 +134,25 @@ main{
     width: 100%;
 }
 
-.main__description_block-title{
+.main__description_block-title {
 
     background: #FF8DCB;
 }
 
-.main__description_block-text{
+.main__description_block-text {
     font-weight: 400;
 
     line-height: 1.3;
 }
 
-.main__description_block{
+.main__description_block {
     gap: 10px;
     display: flex;
     flex-direction: column;
     grid-column-start: 2;
 }
 
-.main__description{
+.main__description {
     display: grid;
     grid-template-columns: 1fr 66%;
     gap: 20px;
@@ -167,7 +161,7 @@ main{
     grid-auto-columns: auto;
 }
 
-.main__description_concentration{
+.main__description_concentration {
     margin-block-start: 1px;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -175,25 +169,25 @@ main{
     align-items: start;
 }
 
-.main__description_title-concentration{
+.main__description_title-concentration {
     grid-area: 1 / 1 / 2 / 4;
     grid-template-columns: 1fr 1fr 1fr;
     width: 30%;
 }
 
-.main__description_block-concentration{
+.main__description_block-concentration {
     width: 100%;
     gap: 10px;
     display: flex;
     flex-direction: column;
 }
 
-.main__description_title-methods{
+.main__description_title-methods {
     grid-area: 1 / 1 / 7 / 2;
     width: 100%;
 }
 
-.main__description_methods{
+.main__description_methods {
     margin-block-start: 2px;
     display: grid;
     grid-template-columns: 1fr 66%;
@@ -201,7 +195,7 @@ main{
     grid-auto-columns: auto;
 }
 
-.main__description_block-methods{
+.main__description_block-methods {
     display: flex;
     flex-direction: column;
     height: fit-content;
@@ -209,12 +203,12 @@ main{
     grid-column-start: 2;
 }
 
-.main__description_block_title-methods{
+.main__description_block_title-methods {
     font-weight: 400;
     background: #FF8DCB;
 }
 
-.main__description_images{
+.main__description_images {
     margin-block-start: 20px;
     display: grid;
     gap: 20px;
@@ -226,37 +220,37 @@ main{
 .img {
     width: 100%;
     height: 100%;
-    object-fit:cover;
+    object-fit: cover;
     display: block;
 }
 
-.main__description_image-sunset{
+.main__description_image-sunset {
     grid-column: span 2;
 }
 
-.main__description_image-ice-cream{
+.main__description_image-ice-cream {
     grid-row: span 2;
 }
 
-.main__description_image-tape{
+.main__description_image-tape {
     grid-row: span 2
 }
 
-.main__description_image-street{
+.main__description_image-street {
     grid-column: span 2;
 }
 
 /* /блоки с описанием в main */
 
 /* footer */
-.footer-text{
+.footer-text {
     color: #FFC2E6;
-    text-shadow: 2px 2px 0px #FF0070;
+    text-shadow: 2px 2px 0 #FF0070;
     font-size: 157px;
     font-weight: 700;
 }
 
-.footer{
+.footer {
     margin-block-start: 66px;
     position: relative;
     display: flex;
@@ -265,39 +259,41 @@ main{
     min-height: 648px;
 }
 
-.footer_title{
+.footer_title {
     font-weight: 700;
     font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
     color: #FFC2E6;
-    text-shadow: 4px 4px 0px #FF0070;
+    text-shadow: 4px 4px 0 #FF0070;
     margin: auto;
 }
 
 /* /footer */
 
 /* стилизация ссылок */
-a{
-    text-shadow: 3px 2px 0px #FF8DCB;
+a {
+    text-shadow: 3px 2px 0 #FF8DCB;
     text-decoration: none;
 }
 
-a:hover{
+a:hover {
     border-bottom: 1px solid #353430;
 }
 
-a:focus{
+a:focus {
     outline: none;
 }
-a:focus-visible{
+
+a:focus-visible {
     border: 1px solid #353430;
     outline: none;
 }
+
 /* /стилизация ссылок */
 
-.decorated-zone:before{
+.decorated-zone:before {
     position: absolute;
     bottom: 20px;
-    left: 0px;
+    left: 0;
     content: "";
     width: 25px;
     height: 25px;
@@ -305,9 +301,9 @@ a:focus-visible{
     border-block-end: 1px solid #353430;
 }
 
-.decorated-zone:after{
+.decorated-zone:after {
     position: absolute;
-    right: 0px;
+    right: 0;
     top: 20px;
     content: "";
     width: 25px;
@@ -316,20 +312,10 @@ a:focus-visible{
     border-block-start: 1px solid #353430;
 }
 
-/* theme_dark */
-
-.theme_dark .header__theme-menu-button_type_dark::after{
-    content: "";
-    position: absolute;
-    border: 1px solid #FF0070;
-    width: 70px;
-    height: 26px;
-    left: -7px;
-    top: 2px;
-}
 
 /*REC*/
-.theme_dark .header-decoration {
+
+.header-decoration {
     color: var(--heading_title-color);
     display: flex;
     position: absolute;
@@ -340,7 +326,7 @@ a:focus-visible{
     right: 29px;
 }
 
-.theme_dark .header-decoration::before {
+.header-decoration::before {
     content: "";
     display: block;
     position: absolute;
@@ -353,53 +339,6 @@ a:focus-visible{
 }
 
 /*/REC*/
-
-.theme_dark {
-    background-image: url("../images/cover-image-dark.png");
-}
-/* /theme_dark */
-
-/* theme_auto */
-
-@media (prefers-color-scheme: dark) {
-
-    .page.theme_auto {
-        /* сохраните этот селектор в приведённом виде.
-          Так стили написанные ниже будут иметь больший вес,
-          чем стили в медиазапросе предпочтений пользователя
-        */
-    }
-
-    .theme_auto {
-        background-image: url("../images/cover-image-dark.png");
-    }
-
-    .theme_auto .header-decoration {
-        color: var(--heading_title-color);
-        display: flex;
-        position: absolute;
-        align-items: center;
-        font-size: 18px;
-        font-weight: 400;
-        top: 22px;
-        right: 29px;
-    }
-
-    .theme_auto .header-decoration::before {
-        content: "";
-        display: block;
-        position: absolute;
-        z-index: 2;
-        width: 25px;
-        height: 25px;
-        background-image: url("../images/Ellipse.png");
-        background-position: center;
-        left: 35px;
-    }
-
-}
-
-/* /theme_auto */
 
 /* Медиазапросы */
 
@@ -421,12 +360,7 @@ a:focus-visible{
 
     }
 
-    .header_title{
-        text-shadow: 4px 4px 0px #FF8DCB;
-
-    }
-
-    .header_description-item{
+    .header_description-item {
         margin-block-end: 49px;
     }
 
@@ -444,42 +378,38 @@ a:focus-visible{
 
     }
 
-    .main__description_title-concentration{
+    .main__description_title-concentration {
 
         grid-area: 1 / 1 / 2 / 2;
 
     }
 
-    .main__description_block-concentration{
+    .main__description_block-concentration {
 
         gap: 8px;
 
     }
 
-    .main__description_methods{
+    .main__description_methods {
 
         grid-template-columns: 1fr 2fr;
 
     }
 
-    .main__description_images{
+    .main__description_images {
 
         grid-template-rows: 192px 229px 318px;
     }
 
-    .footer{
+    .footer {
         margin-block-start: 64px;
-    }
-
-    .footer_title{
-        text-shadow: 4px 4px 0px #FF8DCB;
     }
 
 }
 
 @media (width <= 375px) {
 
-    .header{
+    .header {
         padding-block-end: 20px;
     }
 
@@ -497,15 +427,14 @@ a:focus-visible{
 
     }
 
-    .header_title{
+    .header_title {
         font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
-        text-shadow: 4px 4px 0px #FF8DCB;
-        margin-inline-start: 0px;
+        margin-inline-start: 0;
         line-height: 95.7px;
     }
 
 
-    .header_description{
+    .header_description {
 
         width: 100%;
 
@@ -513,12 +442,12 @@ a:focus-visible{
 
     .header_description-item {
 
-        margin-block-end: 0px;
+        margin-block-end: 0;
 
     }
 
-    .main__description_block{
-        margin-inline-start: 0px;
+    .main__description_block {
+        margin-inline-start: 0;
     }
 
     .main__description {
@@ -537,9 +466,9 @@ a:focus-visible{
 
     }
 
-    .main__description_title-concentration{
+    .main__description_title-concentration {
 
-    width: 100%;
+        width: 100%;
 
     }
 
@@ -551,9 +480,9 @@ a:focus-visible{
 
     }
 
-    main{
+    main {
 
-    gap: 50px;
+        gap: 50px;
 
     }
 
@@ -572,8 +501,8 @@ a:focus-visible{
 
     }
 
-    .decorated-zone:after{
-        top: 0px;
+    .decorated-zone:after {
+        top: 0;
     }
 
     .footer {
@@ -585,23 +514,46 @@ a:focus-visible{
 
     .footer_title {
         font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
-        text-shadow: 4px 4px 0px #FF8DCB;
     }
 
-    .theme_dark .header-decoration {
+    .header-decoration {
         top: 2px;
     }
-
-    .theme_auto .header-decoration {
-        top: 2px;
-    }
-
 }
 
-@media ( 424px > width > 375px) {
+@media (600px > width > 375px) {
 
     .header_description {
         width: 100%;
+        align-self: center;
     }
 
+    .header_title {
+        font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
+        margin-inline-start: 0;
+        line-height: 95.7px;
+    }
+
+    .footer_title{
+        font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
+    }
+
+    .main__description {
+        display: flex;
+        flex-direction: column;
+        margin-block-start: 31px;
+    }
+
+    .main__description_title-concentration {
+        width: 50%;
+    }
+
+    .main__description_methods {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .page {
+        padding: 10px;
+    }
 }

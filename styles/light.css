@@ -12,26 +12,24 @@
     --heading_title-color: #353430;
     --bg_title-color: #FF8DCB;
     --focus-color: #FFC2E6;
+    --hover-color: rgba(50, 49, 45, 0.40);
+    --header_title-color: #FF0070
+
 }
 
-
 .page.theme_light {
-    /* сохраните этот селектор в приведённом виде.
-      Так стили написанные ниже будут иметь больший вес,
-      чем стили в медиазапросе предпочтений пользователя
-    */
+    background-color: var(--bg-color);
+    --background-image: url(../images/cover-image-light.png);
 }
 
 .theme_light a:hover {
-    border-bottom: 1px solid #353430;
+    border-color: var(--title-color);
 }
 
-.theme_light .header-decoration {
-    display: none;
-}
+.theme_light.header__theme-menu-button_active {
 
-.theme_light {
-    background-color: var(--bg-color);
+    border: 1px solid var(--text-color);
+
 }
 
 .theme_light .main__description_block-text {
@@ -40,6 +38,12 @@
 
 .theme_light .main__description_title {
     color: var(--heading_title-color);
+}
+
+.theme_light .header__theme-menu-button:hover::after {
+
+    border-color: var(--hover-color);
+
 }
 
 .theme_light .main__description_block-title {
@@ -58,12 +62,18 @@
 
 .theme_light .header_title {
     color: var(--focus-color);
-    text-shadow: 4px 4px 0px #FF0070;
+    text-shadow: 4px 4px 0px var(--header_title-color);
 }
 
 .theme_light .footer_title {
     color: var(--focus-color);
-    text-shadow: 4px 4px 0px #FF0070;
+    text-shadow: 4px 4px 0px var(--header_title-color);
 }
 
+.page.theme_light .header-decoration {
+    display: none;
+}
 
+.page.theme_dark .header-decoration {
+    display: flex;
+}
