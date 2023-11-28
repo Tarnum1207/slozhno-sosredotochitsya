@@ -5,7 +5,6 @@
 */
 
 :root .theme_dark {
-
     --bg-color: #000028;
     --text-color: #F1B2CE;
     --title-color: #000028;
@@ -31,13 +30,10 @@
 }
 
 .theme_dark .header__theme-menu-button:hover::after {
-
     border-color: var(--hover-color);
-
 }
 
 .theme_dark.header__theme-menu-button_active {
-
     border: 1px solid var(--heading_title-color);
 }
 
@@ -47,7 +43,6 @@
 }
 
 .theme_dark .header__theme-menu-button:focus {
-
     border-color: var(--bg_title-color);
 }
 
@@ -103,11 +98,9 @@
 }
 
 .theme_dark a {
-    text-shadow: var(--bg_title-color);
+    text-shadow: 3px 2px 0 var(--bg_title-color);
 }
 
 .theme_dark .header__theme-menu-button_type_dark::after {
-
     border-color: var(--heading_title-color);
-
 }

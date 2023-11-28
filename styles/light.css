@@ -5,7 +5,6 @@
 */
 
 :root .theme_light {
-
     --bg-color: #FFF1F7;
     --text-color: #353430;
     --title-color: #353430;
@@ -14,7 +13,6 @@
     --focus-color: #FFC2E6;
     --hover-color: rgba(50, 49, 45, 0.40);
     --header_title-color: #FF0070
-
 }
 
 .page.theme_light {
@@ -27,9 +25,7 @@
 }
 
 .theme_light.header__theme-menu-button_active {
-
     border: 1px solid var(--text-color);
-
 }
 
 .theme_light .main__description_block-text {
@@ -41,9 +37,7 @@
 }
 
 .theme_light .header__theme-menu-button:hover::after {
-
     border-color: var(--hover-color);
-
 }
 
 .theme_light .main__description_block-title {
@@ -62,12 +56,12 @@
 
 .theme_light .header_title {
     color: var(--focus-color);
-    text-shadow: 4px 4px 0px var(--header_title-color);
+    text-shadow: 4px 4px 0 var(--header_title-color);
 }
 
 .theme_light .footer_title {
     color: var(--focus-color);
-    text-shadow: 4px 4px 0px var(--header_title-color);
+    text-shadow: 4px 4px 0 var(--header_title-color);
 }
 
 .page.theme_light .header-decoration {

@@ -20,7 +20,6 @@
     border: none;
     background-color: transparent;
     position: relative;
-
 }
 
 .header__theme-menu-button:hover::after {
@@ -34,7 +33,6 @@
 }
 
 .header__theme-menu-button:focus {
-
     outline: none;
 }
 
@@ -135,13 +133,11 @@ main {
 }
 
 .main__description_block-title {
-
     background: #FF8DCB;
 }
 
 .main__description_block-text {
     font-weight: 400;
-
     line-height: 1.3;
 }
 
@@ -331,11 +327,13 @@ a:focus-visible {
     display: block;
     position: absolute;
     z-index: 2;
-    width: 25px;
-    height: 25px;
-    background-image: url("../images/Ellipse.png");
-    background-position: center;
-    left: 35px;
+    width: 9px;
+    height: 9px;
+    background: #FF0070;
+    border-radius: 50%;
+    filter: drop-shadow(0px 0px 4px #FF0070);
+    top: 6px;
+    left: 43px;
 }
 
 /*/REC*/
@@ -345,19 +343,15 @@ a:focus-visible {
 @media (width <= 768px) {
 
     .header__theme-menu-list {
-
         grid-template-columns: auto;
         justify-content: flex-end;
         gap: 10px;
         margin-block-start: 42px;
         margin-inline-end: 8px;
-
     }
 
     .header__theme-menu {
-
         align-self: center;
-
     }
 
     .header_description-item {
@@ -365,39 +359,28 @@ a:focus-visible {
     }
 
     .main__description {
-
         grid-template-columns: 1fr 2fr;
-
     }
 
     .main__description_concentration {
-
         grid-template-columns: 1fr;
         grid-template-rows: repeat(4, min-content);
         gap: 22px;
-
     }
 
     .main__description_title-concentration {
-
         grid-area: 1 / 1 / 2 / 2;
-
     }
 
     .main__description_block-concentration {
-
         gap: 8px;
-
     }
 
     .main__description_methods {
-
         grid-template-columns: 1fr 2fr;
-
     }
 
     .main__description_images {
-
         grid-template-rows: 192px 229px 318px;
     }
 
@@ -419,12 +402,10 @@ a:focus-visible {
 
 
     .header__theme-menu-list {
-
         grid-template-columns: auto;
         justify-content: flex-end;
         gap: 11px;
         margin-block-start: 0;
-
     }
 
     .header_title {
@@ -435,15 +416,11 @@ a:focus-visible {
 
 
     .header_description {
-
         width: 100%;
-
     }
 
     .header_description-item {
-
         margin-block-end: 0;
-
     }
 
     .main__description_block {
@@ -451,54 +428,38 @@ a:focus-visible {
     }
 
     .main__description {
-
         display: flex;
         flex-direction: column;
         margin-block-start: 31px;
-
     }
 
     .main__description_concentration {
-
         display: flex;
         flex-direction: column;
-
-
     }
 
     .main__description_title-concentration {
-
         width: 100%;
-
     }
 
     .main__description_methods {
-
         display: flex;
         flex-direction: column;
-
-
     }
 
     main {
-
         gap: 50px;
-
     }
 
     .main__description_images {
-
         display: flex;
         flex-direction: column;
         gap: 10px;
         margin-block-start: 10px;
-
     }
 
     .main__description_block-images {
-
         margin-block-start: 5px;
-
     }
 
     .decorated-zone:after {
@@ -506,10 +467,8 @@ a:focus-visible {
     }
 
     .footer {
-
         margin-block-start: 49px;
         padding-block-end: 19px;
-
     }
 
     .footer_title {
